@@ -815,7 +815,7 @@ const PaperPresentation = () => {
               </div>
               <div>
                 <h4 className="text-xl font-bold text-slate-900 mb-2">賦能非心臟專科醫師</h4>
-                <p className="text-slate-600">在缺乏心臟專科醫師的基層醫療或資源匱乏地區，此系統可作為可靠的把關者，協助醫師快速判斷是否需要進一步轉診。</p>
+                <p className="text-slate-600">在缺乏心臟專科醫師的基層醫療或資源匱乏地區，此系統可作為輔助判斷工具，協助醫師快速判斷是否需要進一步轉診。</p>
               </div>
             </div>
 
