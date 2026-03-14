@@ -320,6 +320,7 @@ const PaperPresentation = () => {
       {/* Hero Section */}
       <header ref={heroRef} className="relative bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white pt-24 pb-32 overflow-hidden">
         {/* Neural Network Particles Canvas */}
+        
         <canvas 
           ref={canvasRef} 
           className="absolute top-0 left-0 w-full h-full pointer-events-none" 
@@ -336,7 +337,11 @@ const PaperPresentation = () => {
         <div className="max-w-4xl mx-auto px-4 text-center relative z-10" style={{ zIndex: 10 }}>
           <div className="inline-flex items-center gap-2 bg-blue-500/20 border border-blue-400/30 px-3 py-1 rounded-full text-blue-200 text-sm mb-6 backdrop-blur-sm">
             <FileText className="w-4 h-4" />
-            <span>Journal of the American Heart Association 2026 (In Press), Impact Factor: 6.106</span>
+          <span>
+Journal of the American Heart Association (JAHA) • March 10, 2026 • 
+<a href="https://doi.org/10.1161/JAHA.125.045851" target='_blank'>DOI: 10.1161/JAHA.125.045851</a> • 
+IF: 6.106
+</span>
           </div>
           <h1 className="text-3xl md:text-6xl font-extrabold tracking-tight mb-6 leading-tight">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-300 to-teal-300">
@@ -636,7 +641,7 @@ const PaperPresentation = () => {
             <div>
               <h5 className="text-white font-bold text-lg mb-4">論文資訊</h5>
               <p className="mb-2 italic">Automated classification of mitral and tricuspid regurgitation with explainability and real-world practice experience</p>
-              <p className="text-sm">Accepted by Journal of the American Heart Association 2026 (In Press)</p>
+              <p className="text-sm">Journal of the American Heart Association. Published online March 10, 2026. <a href="https://doi.org/10.1161/JAHA.125.045851" target='_blank'>DOI: 10.1161/JAHA.125.045851</a></p>
             </div>
             <div>
               <h5 className="text-white font-bold text-lg mb-4">研究團隊</h5>
