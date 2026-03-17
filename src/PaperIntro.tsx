@@ -230,6 +230,7 @@ const PaperPresentation = () => {
   }, []);
 
   const sections = [
+    { id: 'overview', title: '功能概覽' },
     { id: 'problem', title: '問題與挑戰' },
     { id: 'solution', title: 'AI 解決方案' },
     { id: 'results', title: '研究成果' },
@@ -355,7 +356,7 @@ IF: 6.106
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button 
-              onClick={() => scrollToSection('solution')}
+              onClick={() => scrollToSection('overview')}
               className="bg-white text-blue-900 px-8 py-3.5 rounded-full font-bold hover:bg-blue-50 transition-all shadow-lg flex items-center justify-center gap-2"
             >
               了解核心技術 <ArrowRight className="w-5 h-5" />
@@ -369,6 +370,90 @@ IF: 6.106
           </div>
         </div>
       </header>
+
+      {/* Feature Overview Section */}
+      <section id="overview" className="py-20 bg-slate-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-blue-600 font-semibold tracking-wide uppercase text-sm mb-3">What Can It Do?</h2>
+            <h3 className="text-3xl md:text-4xl font-bold text-slate-900">AI-ECHO 能為您做什麼？</h3>
+            <p className="mt-4 text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
+              這套 AI 系統整合多項先進技術，全自動完成從影像輸入到逆流嚴重度分級的完整流程，為臨床醫師提供快速、客觀且可解釋的輔助診斷。
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="group bg-gradient-to-br from-blue-50 to-indigo-50 p-8 rounded-2xl border border-blue-100 hover:shadow-xl hover:border-blue-300 transition-all duration-300">
+              <div className="w-14 h-14 bg-blue-600 rounded-xl flex items-center justify-center mb-6 text-white group-hover:scale-110 transition-transform duration-300">
+                <FileText className="w-7 h-7" />
+              </div>
+              <h4 className="text-xl font-bold text-slate-900 mb-3">自動讀取 DICOM</h4>
+              <p className="text-slate-600 leading-relaxed">
+                直接讀取原始超音波 DICOM 檔案，自動辨識並選取 A4C、PLAX 等標準切面，無需任何人工操作或前處理。
+              </p>
+            </div>
+
+            <div className="group bg-gradient-to-br from-teal-50 to-cyan-50 p-8 rounded-2xl border border-teal-100 hover:shadow-xl hover:border-teal-300 transition-all duration-300">
+              <div className="w-14 h-14 bg-teal-600 rounded-xl flex items-center justify-center mb-6 text-white group-hover:scale-110 transition-transform duration-300">
+                <Activity className="w-7 h-7" />
+              </div>
+              <h4 className="text-xl font-bold text-slate-900 mb-3">收縮期智能感知</h4>
+              <p className="text-slate-600 leading-relaxed">
+                自動偵測心臟收縮期與舒張期，僅在收縮期分析逆流訊號，有效排除正常舒張期血流造成的干擾，大幅降低偽陽性。
+              </p>
+            </div>
+
+            <div className="group bg-gradient-to-br from-purple-50 to-violet-50 p-8 rounded-2xl border border-purple-100 hover:shadow-xl hover:border-purple-300 transition-all duration-300">
+              <div className="w-14 h-14 bg-purple-600 rounded-xl flex items-center justify-center mb-6 text-white group-hover:scale-110 transition-transform duration-300">
+                <Heart className="w-7 h-7" />
+              </div>
+              <h4 className="text-xl font-bold text-slate-900 mb-3">解剖結構定位</h4>
+              <p className="text-slate-600 leading-relaxed">
+                利用語義分割技術精準辨識心房區域，確保 AI 只分析發生在心房內的異常逆流訊號，聚焦病灶所在。
+              </p>
+            </div>
+
+            <div className="group bg-gradient-to-br from-green-50 to-emerald-50 p-8 rounded-2xl border border-green-100 hover:shadow-xl hover:border-green-300 transition-all duration-300">
+              <div className="w-14 h-14 bg-green-600 rounded-xl flex items-center justify-center mb-6 text-white group-hover:scale-110 transition-transform duration-300">
+                <BarChart3 className="w-7 h-7" />
+              </div>
+              <h4 className="text-xl font-bold text-slate-900 mb-3">三級嚴重度分類</h4>
+              <p className="text-slate-600 leading-relaxed">
+                同時輸出二尖瓣 (MR) 與三尖瓣逆流 (TR) 的嚴重度分級：無/輕度、中度、重度，提供完整且量化的評估結果。
+              </p>
+            </div>
+
+            <div className="group bg-gradient-to-br from-orange-50 to-amber-50 p-8 rounded-2xl border border-orange-100 hover:shadow-xl hover:border-orange-300 transition-all duration-300">
+              <div className="w-14 h-14 bg-orange-500 rounded-xl flex items-center justify-center mb-6 text-white group-hover:scale-110 transition-transform duration-300">
+                <Brain className="w-7 h-7" />
+              </div>
+              <h4 className="text-xl font-bold text-slate-900 mb-3">可解釋性視覺化</h4>
+              <p className="text-slate-600 leading-relaxed">
+                生成彩色血流圖 (Flow Maps) 清晰標示逆流位置與範圍，讓醫師直觀理解 AI 判斷依據，增強臨床信任度。
+              </p>
+            </div>
+
+            <div className="group bg-gradient-to-br from-rose-50 to-pink-50 p-8 rounded-2xl border border-rose-100 hover:shadow-xl hover:border-rose-300 transition-all duration-300">
+              <div className="w-14 h-14 bg-rose-500 rounded-xl flex items-center justify-center mb-6 text-white group-hover:scale-110 transition-transform duration-300">
+                <Clock className="w-7 h-7" />
+              </div>
+              <h4 className="text-xl font-bold text-slate-900 mb-3">超高速報告產出</h4>
+              <p className="text-slate-600 leading-relaxed">
+                完整分析流程平均僅需 <strong>6.8 秒</strong>，比人工判讀快約 50%，讓臨床工作流程更順暢，大幅提升醫療效率。
+              </p>
+            </div>
+          </div>
+
+          <div className="mt-12 bg-gradient-to-r from-slate-900 to-blue-900 rounded-3xl p-8 text-white text-center">
+            <ShieldCheck className="w-12 h-12 text-green-400 mx-auto mb-4" />
+            <h4 className="text-2xl font-bold mb-3">跨醫院・跨機台・跨族群</h4>
+            <p className="text-slate-300 max-w-2xl mx-auto leading-relaxed">
+              已通過國立成功大學醫院（內部）與郭綜合醫院、衛福部臺南醫院（外部多中心）的嚴格驗證，
+              在不同醫療環境、不同超音波機台及各年齡層病患中均展現穩定可靠的表現。
+            </p>
+          </div>
+        </div>
+      </section>
 
       {/* Problem Section */}
       <section id="problem" className="py-20 bg-white">
